@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anastasia Tsimpou CV</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body class="bg-light-teal text-gray-dark font-sans relative">
+  <!-- Homepage -->
+  <section id="homepage" class="min-h-screen flex flex-col md:flex-row items-center justify-center bg-light-teal relative">
+    <div class="absolute inset-0 bg-gradient-to-br from-teal-100 via-teal-50 to-transparent max-w-7xl mx-auto p-6 rounded-2xl shadow-2xl z-0"></div>
+    <!-- Left: Profile -->
+    <div class="bg-dark-teal w-full md:w-1/3 max-w-md h-auto md:h-screen flex flex-col items-center justify-center p-6 md:p-8 text-gray-dark relative z-10">
+      <div class="profile-content text-center bg-teal-800 bg-opacity-95 rounded-2xl p-6 shadow-lg">
+        <div class="profile-pic-bg bg-teal-700 rounded-full p-2 inline-block mb-6">
+          <img src="https://i.ibb.co/s9R8kWtT/K-perny-k-p-2026-02-26-135100.png" alt="Anastasia Tsimpou" class="w-38 h-48 rounded-full mx-auto transition-all hover:shadow-glow-teal animate-zoom-in" />
+        </div>
+        <h1 class="text-3xl font-bold uppercase mb-2 animate-fade-in text-white-outline">Anastasia Tsimpou</h1>
+        <p class="text-lg text-teal-200 mb-4 animate-fade-in">Client & Relationship Manager</p>
+        <p class="text-sm text-gray-100 max-w-xs mx-auto mb-6 animate-fade-in">
+          I'm a relationship driven professional with 9 years of experience in investment management and client advisory. I combine analytical thinking with empathy to support informed, responsible decisions and build trusted, long term partnerships.
+        </p>
+        <div class="flex justify-center space-x-4 animate-fade-in">
+          <a href="index.html#" target="_blank" class="text-teal-200 hover:scale-125 transition-transform"><i class="fab fa-linkedin text-xl"></i></a>
+        </div>
+        <div class="mt-6 animate-fade-in">
+          <a href="CV_Anastasia_Tsimpou.pdf" download class="inline-flex items-center justify-center px-6 py-3 bg-teal-500 text-white font-semibold rounded-lg hover:bg-teal-600 hover:shadow-glow-teal transition-all transform hover:scale-105">
+            <i class="fas fa-file-download mr-2"></i>Download CV
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Right: Cards -->
+    <div class="card-grid-container w-full md:w-2/3 max-w-3xl flex items-center justify-center px-4 py-8 md:py-0 bg-light-teal relative z-10">
+      <div class="particles absolute inset-0" id="particles-homepage"></div>
+      <div class="w-full">
+        <div id="card-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+      </div>
+    </div>
+    <!-- Mobile cards overlay -->
+    <div id="mobile-card-grid" class="fixed inset-0 bg-dark-teal z-50 hidden flex-col items-center justify-center p-6">
+      <button id="close-menu" class="absolute top-4 right-4 p-3 text-teal-200 hover:text-teal-300">
+        <i class="fas fa-times text-2xl"></i>
+      </button>
+      <div id="mobile-cards" class="grid grid-cols-1 gap-6 w-full max-w-md"></div>
+    </div>
+  </section>
+
+  <!-- About Me -->
+  <section id="uber-mich" class="min-h-screen flex items-center justify-center px-4 hidden relative">
+    <div id="uber-mich-bg" class="bg-image absolute inset-0 opacity-0 transition-opacity duration-500"></div>
+    <div class="particles absolute inset-0" id="particles-uber-mich"></div>
+    <button class="back-button fixed top-4 left-4 p-3 rounded-full bg-teal-500 text-white shadow-lg hover:shadow-glow-teal transition-all z-50 animate-pulse-subtle">
+      <svg class="w-6 h-6 transform transition-transform hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+    <div class="max-w-4xl text-center bg-white bg-opacity-90 backdrop-blur-sm p-12 rounded-2xl shadow-2xl card animate-scale-in">
+      <img src="https://i.ibb.co/s9R8kWtT/K-perny-k-p-2026-02-26-135100.png" alt="Anastasia Tsimpou" class="w-38 h-48 md:w-38 md:h-48 rounded-full mx-auto mb-6 transition-all hover:scale-110 hover:shadow-glow-teal animate-zoom-in" />
+      <h1 class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-600 to-teal-400 mb-4 animate-fade-in">Anastasia Tsimpou</h1>
+      <p class="text-xl md:text-2xl text-gray-dark mb-6 animate-typewriter">Client & Relationship Manager</p>
+      <p class="text-lg text-gray-dark max-w-2xl mx-auto animate-fade-in">
+        I'm a relationship driven professional with 9 years of experience in investment management and client advisory. I combine analytical thinking with empathy to support informed, responsible decisions and build trusted, long term partnerships. My priorities are client satisfaction, quick responsiveness, meeting deadlines and delivering high quality work with attention to detail.
+      </p>
+    </div>
+  </section>
+
+  <!-- Work Experience -->
+  <section id="berufserfahrung" class="min-h-screen flex items-center justify-center px-4 hidden relative">
+    <div id="berufserfahrung-bg" class="bg-image absolute inset-0 opacity-0 transition-opacity duration-500"></div>
+    <div class="particles absolute inset-0" id="particles-berufserfahrung"></div>
+    <button class="back-button fixed top-4 left-4 p-3 rounded-full bg-teal-500 text-white shadow-lg hover:shadow-glow-teal transition-all z-50 animate-pulse-subtle">
+      <svg class="w-6 h-6 transform transition-transform hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+    <div class="max-w-4xl bg-white bg-opacity-90 backdrop-blur-sm p-12 rounded-2xl shadow-2xl card animate-scale-in">
+      <h2 class="text-4xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-teal-600 to-teal-400 mb-12 text-center animate-fade-in">Work Experience</h2>
+      <div id="experience-timeline" class="space-y-8"></div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="fahigkeiten" class="min-h-screen flex items-center justify-center px-4 hidden relative">
+    <div id="fahigkeiten-bg" class="bg-image absolute inset-0 opacity-0 transition-opacity duration-500"></div>
+    <div class="particles absolute inset-0" id="particles-fahigkeiten"></div>
+    <button class="back-button fixed top-4 left-4 p-3 rounded-full bg-teal-500 text-white shadow-lg hover:shadow-glow-teal transition-all z-50 animate-pulse-subtle">
+      <svg class="w-6 h-6 transform transition-transform hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+    <div class="max-w-5xl bg-white bg-opacity-90 backdrop-blur-sm p-12 rounded-2xl shadow-2xl card animate-scale-in">
+      <h2 class="text-4xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-teal-600 to-teal-400 mb-12 text-center animate-fade-in">Skills</h2>
+      <div class="flex justify-center mb-8 animate-fade-in">
+        <select id="skills-filter" class="px-6 py-3 bg-white bg-opacity-95 rounded-full shadow-lg text-gray-dark hover:bg-teal-500 hover:text-white transition-all animate-pulse-subtle">
+          <option value="All">All</option>
+          <option value="Technical Tools & Software">Technical Tools & Software</option>
+          <option value="Core Competencies">Core Competencies</option>
+          <option value="Languages">Languages</option>
+        </select>
+      </div>
+      <div id="skills-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projekte" class="min-h-screen flex items-center justify-center px-4 hidden relative">
+    <div id="projekte-bg" class="bg-image absolute inset-0 opacity-0 transition-opacity duration-500"></div>
+    <div class="particles absolute inset-0" id="particles-projekte"></div>
+    <button class="back-button fixed top-4 left-4 p-3 rounded-full bg-teal-500 text-white shadow-lg hover:shadow-glow-teal transition-all z-50 animate-pulse-subtle">
+      <svg class="w-6 h-6 transform transition-transform hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+    <div class="max-w-5xl bg-white bg-opacity-90 backdrop-blur-sm p-12 rounded-2xl shadow-2xl card animate-scale-in">
+      <h2 class="text-4xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-teal-600 to-teal-400 mb-12 text-center animate-fade-in">Projects</h2>
+      <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+    </div>
+  </section>
+
+  <!-- Certificates -->
+  <section id="certificates" class="min-h-screen flex items-center justify-center px-4 hidden relative">
+    <div id="certificates-bg" class="bg-image absolute inset-0 opacity-0 transition-opacity duration-500"></div>
+    <div class="particles absolute inset-0" id="particles-certificates"></div>
+    <button class="back-button fixed top-4 left-4 p-3 rounded-full bg-teal-500 text-white shadow-lg hover:shadow-glow-teal transition-all z-50 animate-pulse-subtle">
+      <svg class="w-6 h-6 transform transition-transform hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+    <div class="max-w-5xl bg-white bg-opacity-90 backdrop-blur-sm p-12 rounded-2xl shadow-2xl card animate-scale-in">
+      <h2 class="text-4xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-teal-600 to-teal-400 mb-12 text-center animate-fade-in">Certificates</h2>
+      <div class="space-y-10">
+        <div>
+          <h3 class="text-2xl font-bold text-dark-teal mb-4">Investment & ESG Expertise</h3>
+          <ul class="list-disc list-inside text-gray-dark space-y-2">
+            <li>BNP Paribas AM Investment Academy</li>
+            <li>Franklin Templeton Academy</li>
+            <li>CFA ESG Investing</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold text-dark-teal mb-4">Sales & Communication</h3>
+          <ul class="list-disc list-inside text-gray-dark space-y-2">
+            <li>Sales Effectiveness: ALBA Business School & SEV (Hellenic Federation of Enterprises)</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold text-dark-teal mb-4">Psychology & Human Behavior</h3>
+          <ul class="list-disc list-inside text-gray-dark space-y-2">
+            <li>Organisational Behaviour & Leadership</li>
+            <li>Mental Health First Aid</li>
+            <li>Cognitive Behavioral Therapy</li>
+            <li>Empathy Bootcamp</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="ausbildung" class="min-h-screen flex items-center justify-center px-4 hidden relative">
+    <div id="ausbildung-bg" class="bg-image absolute inset-0 opacity-0 transition-opacity duration-500"></div>
+    <div class="particles absolute inset-0" id="particles-ausbildung"></div>
+    <button class="back-button fixed top-4 left-4 p-3 rounded-full bg-teal-500 text-white shadow-lg hover:shadow-glow-teal transition-all z-50 animate-pulse-subtle">
+      <svg class="w-6 h-6 transform transition-transform hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+    <div class="max-w-4xl bg-white bg-opacity-90 backdrop-blur-sm p-12 rounded-2xl shadow-2xl card animate-scale-in">
+      <h2 class="text-4xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-teal-600 to-teal-400 mb-12 text-center animate-fade-in">Education</h2>
+      <div id="education-list" class="space-y-8"></div>
+    </div>
+  </section>
+
+  <!-- References -->
+  <section id="referenzen" class="min-h-screen flex items-center justify-center px-4 hidden relative">
+    <div id="referenzen-bg" class="bg-image absolute inset-0 opacity-0 transition-opacity duration-500"></div>
+    <div class="particles absolute inset-0" id="particles-referenzen"></div>
+    <button class="back-button fixed top-4 left-4 p-3 rounded-full bg-teal-500 text-white shadow-lg hover:shadow-glow-teal transition-all z-50 animate-pulse-subtle">
+      <svg class="w-6 h-6 transform transition-transform hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+    <div class="max-w-5xl bg-white bg-opacity-90 backdrop-blur-sm p-12 rounded-2xl shadow-2xl card animate-scale-in">
+      <h2 class="text-4xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-teal-600 to-teal-400 mb-12 text-center animate-fade-in">References</h2>
+      <div id="references-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8"></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="kontakt" class="min-h-screen flex items-center justify-center px-4 hidden relative">
+    <div id="kontakt-bg" class="bg-image absolute inset-0 opacity-0 transition-opacity duration-500"></div>
+    <div class="particles absolute inset-0" id="particles-kontakt"></div>
+    <button class="back-button fixed top-4 left-4 p-3 rounded-full bg-teal-500 text-white shadow-lg hover:shadow-glow-teal transition-all z-50 animate-pulse-subtle">
+      <svg class="w-6 h-6 transform transition-transform hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+    <div class="max-w-4xl bg-white bg-opacity-90 backdrop-blur-sm p-12 rounded-2xl shadow-2xl card animate-scale-in">
+      <h2 class="text-4xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-teal-600 to-teal-400 mb-12 text-center animate-fade-in">Contact</h2>
+      <div class="space-y-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-center">
+          <p class="animate-fade-in transform hover:scale-110 transition-transform"><i class="fas fa-envelope mr-2 text-teal-500"></i><span id="email">Loading...</span></p>
+          <p class="animate-fade-in transform hover:scale-110 transition-transform"><i class="fas fa-phone mr-2 text-teal-500"></i><span id="phone">Loading...</span></p>
+        </div>
+        <div class="text-center space-y-2">
+          <p class="text-gray-dark animate-fade-in"><i class="fas fa-map-marker-alt mr-2 text-teal-500"></i>Frankfurt am Main</p>
+          <p class="text-gray-dark animate-fade-in"><i class="fas fa-file-download mr-2 text-teal-500"></i><a href="CV_Anastasia_Tsimpou.pdf" target="_blank" class="text-teal-500 hover:underline">Download CV</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    :root {
+      --light-teal: #E0F2F1;
+      --teal-50: #F0F9F8;
+      --teal-100: #B0D3D0;
+      --teal-200: #89C5C1;
+      --teal-300: #62B7B2;
+      --teal-400: #3BA9A3;
+      --teal-500: #149B94;
+      --teal-600: #0F8A84;
+      --teal-700: #0A7974;
+      --teal-800: #056864;
+      --teal-900: #015753;
+      --grey-light: #CBD5E1;
+      --grey-dark: #334155;
+      --white: #FFFFFF;
+      --dark-teal: #056864;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.5;
+      background-color: var(--light-teal);
+      color: var(--grey-dark);
+      overflow-x: hidden;
+    }
+    .text-white-outline {
+      color: #fff;
+      -webkit-text-stroke: 1.5px #000;
+      text-shadow: 
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
+    }
+    .home-card {
+      background: linear-gradient(135deg, var(--white) 0%, var(--teal-50) 100%);
+      border: 2px solid transparent;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      padding: 1.5rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    .home-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 20% 80%, var(--teal-100) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .home-card:hover::before {
+      opacity: 1;
+    }
+    .home-card:hover {
+      border-color: var(--teal-400);
+      transform: translateY(-5px) rotate(1deg);
+      box-shadow: 0 10px 25px rgba(20, 155, 148, 0.2), 0 0 0 1px var(--teal-200);
+      background: linear-gradient(135deg, var(--teal-100) 0%, var(--teal-200) 100%);
+    }
+    .home-card .card-title {
+      transition: opacity 0.3s ease;
+      color: var(--dark-teal);
+    }
+    .home-card:hover .card-title {
+      opacity: 0;
+    }
+    .home-card .card-desc {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      right: 0;
+      padding: 0 16px;
+      color: var(--grey-dark);
+      font-weight: 500;
+    }
+    .home-card:hover .card-desc {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .card.bg-opacity-80, .card.bg-opacity-90 {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(219, 234, 254, 0.5);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+    .bg-image {
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+      filter: blur(8px);
+    }
+    .bg-image::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, var(--teal-900) 0%, transparent 50%);
+      opacity: 0.2;
+    }
+    .hover\:shadow-glow-teal:hover {
+      box-shadow: 0 0 25px rgba(20, 155, 148, 0.4), 0 0 50px rgba(20, 155, 148, 0.2);
+    }
+    .progress-circle {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      margin-right: 16px;
+    }
+    .progress-circle svg {
+      transform: rotate(-90deg);
+    }
+    .progress-circle .circle-bg {
+      fill: none;
+      stroke: var(--grey-light);
+      stroke-width: 8;
+    }
+    .progress-circle .circle-fg {
+      fill: none;
+      stroke: var(--teal-500);
+      stroke-width: 8;
+      stroke-linecap: round;
+    }
+    .progress-circle .circle-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 14px;
+      font-weight: bold;
+      color: var(--teal-600);
+    }
+    .progress-circle:hover {
+      transform: scale(1.1);
+      filter: drop-shadow(0 0 10px rgba(20, 155, 148, 0.3));
+    }
+    .animate-fade-in { animation: fadeIn 0.4s ease-in-out forwards; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .animate-scale-in { animation: scaleIn 0.4s ease-in-out forwards; }
+    @keyframes scaleIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+    .animate-zoom-in { animation: zoomIn 0.6s ease-in-out forwards; }
+    @keyframes zoomIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+    .animate-typewriter { animation: typewriter 2s steps(40) forwards; white-space: nowrap; overflow: hidden; border-right: 2px solid var(--teal-500); }
+    @keyframes typewriter { from { width: 0; } to { width: 100%; } }
+    .animate-pulse-subtle { animation: pulseSubtle 2s infinite ease-in-out; }
+    @keyframes pulseSubtle { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+    .hidden { display: none; }
+    @media (max-width: 1024px) { .card-grid-container { margin-left: 0; padding: 2rem 1rem; } }
+    @media (max-width: 768px) { .bg-dark-teal { height: auto; padding-bottom: 2rem; } .card-grid-container { margin-top: 0; } .home-card { padding: 1rem; } }
+    @media (max-width: 480px) { .profile-content { padding: 1.5rem; } .profile-pic-bg img { width: 100px; height: 100px; } .home-card { padding: 0.75rem; } .home-card .card-desc { font-size: 0.875rem; } }
+  </style>
+
+  <script>
+    console.log("Starting portfolio initialization...");
+    const cvData = {
+      name: "Anastasia Tsimpou",
+      title: "Client & Relationship Manager",
+      shortBio: "I'm a relationship driven professional with 9 years of experience in investment management and client advisory.",
+      bio: "I'm a relationship driven professional with 9 years of experience in investment management and client advisory. I combine analytical thinking with empathy to support informed, responsible decisions and build trusted, long term partnerships. My priorities are client satisfaction, quick responsiveness, meeting deadlines and delivering high quality work with attention to detail.",
+      email: "tsimpoou.anastasia@gmail.com",
+      phone: "+49 152 92609542",
+      profileImg: "https://i.ibb.co/s9R8kWtT/K-perny-k-p-2026-02-26-135100.png",
+      linkedin: "#",
+      experience: [
+        {
+          company: "Schroder Investment Management (Europe) S.A.",
+          role: "Client Manager – Southern CEE & Mediterranean",
+          period: "May 2024 - Sept 2025",
+          description: [
+            "Managed 14 institutional clients",
+            "Led conversations, presented solutions, products",
+            "Conducted market research and competitor analysis",
+            "Collaborated with the Marketing team and external agencies",
+            "Built strong relationships with clients, colleagues and external partners"
+          ]
+        },
+        {
+          company: "Eurobank Asset Management M.F.M.C.",
+          role: "Assistant Director – External Asset Managers Relations & Mutual Fund Sales",
+          period: "July 2023 - April 2024",
+          description: [
+            "Presented mutual funds, market updates and quarterly strategies",
+            "Collaborated regularly with the Funds of Funds department, Global Advisory team and Marketing",
+            "Delivered Third Party Asset Flows monthly",
+            "Presented results, ideas, updates and growth initiatives"
+          ]
+        },
+        {
+          company: "Eurobank Asset Management M.F.M.C.",
+          role: "Associate - External Asset Managers Relations & Mutual Fund Sales",
+          period: "August 2021 - June 2023",
+          description: [
+            "Assisted the Private Banking with portfolio restructuring and management",
+            "Performed model portfolio risk and performance attribution",
+            "Created weekly, monthly, quarterly and ad-hoc presentations & reports",
+            "Initiated and contributed to 2 business development projects"
+          ]
+        },
+        {
+          company: "Eurobank Asset Management M.F.M.C.",
+          role: "Analyst - Mutual Fund Sales",
+          period: "July 2018 - July 2021",
+          description: [
+            "Built long lasting relationships with 52 Private Bankers across Europe",
+            "Liaised with 15 Relationship Managers of external asset managers",
+            "Reviewed and rebalanced our model portfolios and updated them on Bloomberg",
+            "Provided performance attribution metrics to our Risk Department"
+          ]
+        },
+        {
+          company: "Farantouris Insurance and Financial Advisors",
+          role: "Advisor",
+          period: "Dec 2017 - May 2018",
+          description: [
+            "Conducted door to door Insurance sales, advising up to 15 clients daily"
+          ]
+        },
+        {
+          company: "Johnson & Johnson",
+          role: "Junior Brand Activation Manager - Internship",
+          period: "Dec 2017 - May 2018",
+          description: [
+            "Managed marketing projects"
+          ]
+        }
+      ],
+      skills: [
+        { name: "Microsoft Office Suite", category: "Technical Tools & Software", level: 95 },
+        { name: "Salesforce (CRM & client management)", category: "Technical Tools & Software", level: 88 },
+        { name: "PowerBI (dashboards & reporting)", category: "Technical Tools & Software", level: 82 },
+        { name: "Oracle (system used at Eurobank)", category: "Technical Tools & Software", level: 78 },
+        { name: "Bloomberg (portfolio rebalancing & data)", category: "Technical Tools & Software", level: 90 },
+        { name: "Bloomberg terminal", category: "Technical Tools & Software", level: 87 },
+        { name: "Canva", category: "Technical Tools & Software", level: 85 },
+        { name: "Morningstar", category: "Technical Tools & Software", level: 80 },
+        { name: "LSEG", category: "Technical Tools & Software", level: 79 },
+        { name: "Familiarity with Python", category: "Technical Tools & Software", level: 75 },
+        { name: "Strategic client & relationship management", category: "Core Competencies", level: 94 },
+        { name: "Quick responsiveness & high client satisfaction focus", category: "Core Competencies", level: 92 },
+        { name: "Empathy-driven client communication & advisory", category: "Core Competencies", level: 93 },
+        { name: "Capital raising & business development", category: "Core Competencies", level: 89 },
+        { name: "Growth initiatives planning & presentation", category: "Core Competencies", level: 86 },
+        { name: "Converting market updates into sales opportunities", category: "Core Competencies", level: 84 },
+        { name: "Portfolio construction & monitoring", category: "Core Competencies", level: 91 },
+        { name: "Creating professional presentations & reports", category: "Core Competencies", level: 90 },
+        { name: "Stakeholder communication at all levels including executive", category: "Core Competencies", level: 92 },
+        { name: "Public speaking", category: "Core Competencies", level: 85 },
+        { name: "Cross-functional collaboration (Sales, Marketing, Advisory, Risk, Funds of Funds)", category: "Core Competencies", level: 88 },
+        { name: "Collaboration with Marketing team & external agencies", category: "Core Competencies", level: 83 },
+        { name: "Brand activation & marketing campaign support", category: "Core Competencies", level: 81 },
+        { name: "E-content management", category: "Core Competencies", level: 79 },
+        { name: "Meeting strict deadlines & delivering high-quality work", category: "Core Competencies", level: 93 },
+        { name: "Attention to detail in all deliverables", category: "Core Competencies", level: 95 },
+        { name: "Time management & responsiveness under pressure", category: "Core Competencies", level: 91 },
+        { name: "Organisational behaviour & leadership (certificate)", category: "Core Competencies", level: 87 },
+        { name: "Team collaboration & relationship building with colleagues & partners", category: "Core Competencies", level: 90 },
+        { name: "Financial markets understanding (9 years)", category: "Core Competencies", level: 94 },
+        { name: "Bold Prospecting & Opportunity Creation", category: "Core Competencies", level: 84 },
+        { name: "German", category: "Languages", level: 65 },
+        { name: "English", category: "Languages", level: 95 },
+        { name: "Greek", category: "Languages", level: 100 }
+      ],
+      education: [
+        {
+          school: "Athens University of Economics & Business",
+          degree: "BSc in Business Economics & Finance",
+          year: "Graduated September 2017"
+        },
+        {
+          school: "University of Amsterdam (UvA)",
+          degree: "Erasmus Exchange",
+          year: "February 2016 - June 2016"
+        }
+      ],
+      references: [],
+      projects: [
+        // You can add your real projects here later – same format as before
+        // Example placeholder
+        {
+          title: "Example Project Title",
+          subtitle: "Short description or achievement",
+          description: "Detailed project description goes here. You can write multiple lines.",
+          tools: "HubSpot, Meta Ads, Figma, Google Analytics",
+          iframeUrl: "",
+          images: []
+        }
+      ]
+    };
+
+    const sections = [
+      { id: "uber-mich", title: "About Me", icon: "fas fa-user", desc: "Get to know me", bgImage: "https://picsum.photos/1920/1080?random=1" },
+      { id: "berufserfahrung", title: "Work Experience", icon: "fas fa-briefcase", desc: "My professional journey", bgImage: "https://picsum.photos/1920/1080?random=2" },
+      { id: "fahigkeiten", title: "Skills", icon: "fas fa-tools", desc: "My competencies", bgImage: "https://picsum.photos/1920/1080?random=3" },
+      { id: "projekte", title: "Projects", icon: "fas fa-project-diagram", desc: "Selected projects & case studies", bgImage: "https://picsum.photos/1920/1080?random=6" },
+      { id: "certificates", title: "Certificates", icon: "fas fa-certificate", desc: "Certifications & training", bgImage: "https://picsum.photos/1920/1080?random=7" },
+      { id: "ausbildung", title: "Education", icon: "fas fa-graduation-cap", desc: "My educational background", bgImage: "https://picsum.photos/1920/1080?random=4" },
+      { id: "referenzen", title: "References", icon: "fas fa-handshake", desc: "Available upon request", bgImage: "https://picsum.photos/1920/1080?random=5" },
+      { id: "kontakt", title: "Contact", icon: "fas fa-envelope", desc: "Let's connect", bgImage: "https://picsum.photos/1920/1080?random=8" }
+    ];
+
+    function populateHomepageCards() {
+      const cardGrid = document.getElementById("card-grid");
+      const mobileCards = document.getElementById("mobile-cards");
+      sections.forEach((section, index) => {
+        const div = document.createElement("div");
+        div.className = "home-card p-6 text-center animate-fade-in";
+        div.style.animationDelay = `${index * 0.1}s`;
+        div.innerHTML = `
+          <i class="${section.icon} text-3xl text-teal-500 mb-4"></i>
+          <h3 class="card-title text-lg font-semibold text-dark-teal uppercase">${section.title}</h3>
+          <p class="card-desc text-sm text-dark-teal">${section.desc}</p>
+        `;
+        div.addEventListener("click", () => {
+          showSection(section.id);
+          document.getElementById("mobile-card-grid").classList.add("hidden");
+        });
+        cardGrid.appendChild(div);
+
+        const mobileDiv = div.cloneNode(true);
+        mobileDiv.addEventListener("click", () => {
+          showSection(section.id);
+          document.getElementById("mobile-card-grid").classList.add("hidden");
+        });
+        mobileCards.appendChild(mobileDiv);
+      });
+    }
+
+    function populateCVData(data) {
+      try {
+        // Profile sidebar
+        document.querySelector(".profile-content h1").textContent = data.name;
+        document.querySelector(".profile-content p.text-lg").textContent = data.title;
+        document.querySelector(".profile-content p.text-sm").textContent = data.shortBio || data.bio.substring(0, 120) + "...";
+        document.querySelector(".profile-pic-bg img").src = data.profileImg;
+
+        // About me section
+        const uber = document.getElementById("uber-mich");
+        uber.querySelector("h1").textContent = data.name;
+        uber.querySelector("p.text-xl").textContent = data.title;
+        uber.querySelector("p.text-lg").textContent = data.bio;
+        uber.querySelector("img").src = data.profileImg;
+
+        // Contact
+        document.getElementById("email").textContent = data.email;
+        document.getElementById("phone").textContent = data.phone;
+
+        // Experience
+        const timeline = document.getElementById("experience-timeline");
+        timeline.innerHTML = "";
+        data.experience.forEach(item => {
+          const div = document.createElement("div");
+          div.className = "card p-8 animate-fade-in bg-white bg-opacity-95 backdrop-blur-sm hover:-translate-y-2 transition-all shadow-lg";
+          div.innerHTML = `
+            <h3 class="text-2xl font-semibold text-dark-teal">${item.company}</h3>
+            <p class="text-lg text-gray-dark">${item.role}</p>
+            <p class="text-sm text-gray-dark">${item.period}</p>
+            <ul class="mt-4 text-gray-dark list-disc list-inside space-y-2">
+              ${item.description.map(d => `<li>${d}</li>`).join('')}
+            </ul>
+          `;
+          timeline.appendChild(div);
+        });
+
+        // Skills – updated with new list
+        let filter = "All";
+        const skillsGrid = document.getElementById("skills-grid");
+        function renderSkills() {
+          skillsGrid.innerHTML = "";
+          const filtered = filter === "All" ? data.skills : data.skills.filter(s => s.category === filter);
+          filtered.forEach(skill => {
+            const div = document.createElement("div");
+            div.className = "card p-6 animate-fade-in flex items-center bg-white bg-opacity-95 backdrop-blur-sm";
+            div.innerHTML = `
+              <div class="progress-circle">
+                <svg width="80" height="80">
+                  <circle class="circle-bg" cx="40" cy="40" r="36" />
+                  <circle class="circle-fg" cx="40" cy="40" r="36" stroke-dasharray="226" stroke-dashoffset="226" data-level="${skill.level}" />
+                </svg>
+                <span class="circle-text">${skill.level}%</span>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-dark-teal">${skill.name}</h3>
+                <p class="text-gray-dark">${skill.category}</p>
+              </div>
+            `;
+            skillsGrid.appendChild(div);
+            gsap.to(div.querySelector(".circle-fg"), {
+              strokeDashoffset: 226 * (1 - skill.level / 100),
+              duration: 0.8,
+              ease: "power2.out"
+            });
+          });
+        }
+        renderSkills();
+        document.getElementById("skills-filter").addEventListener("change", e => {
+          filter = e.target.value;
+          renderSkills();
+        });
+
+        // Projects – full media support (unchanged from original)
+        const projectsGrid = document.getElementById("projects-grid");
+        projectsGrid.innerHTML = "";
+        data.projects.forEach((project, i) => {
+          const div = document.createElement("div");
+          div.className = "card p-8 animate-fade-in bg-white bg-opacity-95 backdrop-blur-sm hover:-translate-y-2 transition-all shadow-lg";
+          div.style.animationDelay = `${i * 0.1}s`;
+
+          let media = '';
+          if (project.iframeUrl?.trim() || (project.images?.length > 0)) {
+            media = '<div class="mt-12 space-y-12">';
+            
+            if (project.iframeUrl?.trim()) {
+              media += `<div><iframe src="https://anastasia-tsimpou.web.app/${project.iframeUrl}" class="w-full aspect-video rounded-lg shadow-lg border-0" allowfullscreen loading="lazy"></iframe></div>`;
+            }
+
+            if (project.images?.length > 0) {
+              project.images.forEach(url => {
+                const u = url.trim().toLowerCase();
+                let html = '';
+
+                if (u.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) {
+                  html = `<img src="https://anastasia-tsimpou.web.app/${url}" alt="Project media" class="w-full rounded-lg shadow-lg object-cover max-h-[800px] mx-auto">`;
+                } else if (u.endsWith('.pdf')) {
+                  html = `<div class="bg-gray-50 p-4 rounded-lg">
+                    <iframe src="https://anastasia-tsimpou.web.app/${url}#view=FitH&toolbar=1" class="w-full h-[800px] rounded-lg border-0" type="application/pdf"></iframe>
+                    <p class="text-center mt-4"><a href="https://anastasia-tsimpou.web.app/${url}" target="_blank" class="text-teal-600 hover:underline">Open PDF in new tab</a></p>
+                  </div>`;
+                } else if (u.match(/\.(mp4|webm|ogg)$/)) {
+                  const type = u.endsWith('ogg') ? 'ogg' : u.split('.').pop();
+                  html = `<video controls class="w-full aspect-video rounded-lg shadow-lg bg-black">
+                    <source src="https://anastasia-tsimpou.web.app/${url}" type="video/${type}">Your browser does not support video.
+                  </video>`;
+                } else if (u.includes('youtube.com') || u.includes('youtu.be') || u.includes('vimeo.com')) {
+                  let embed = '';
+                  if (u.includes('youtube.com') || u.includes('youtu.be')) {
+                    let id = u.includes('youtu.be') ? u.split('/').pop().split('?')[0] : (u.split('v=')[1] || '').split('&')[0];
+                    if (id) embed = `https://www.youtube.com/embed/${id}`;
+                  } else if (u.includes('vimeo.com')) {
+                    const id = u.split('/').pop().split('?')[0];
+                    embed = `https://player.vimeo.com/video/${id}`;
+                  }
+                  if (embed) {
+                    html = `<iframe src="https://anastasia-tsimpou.web.app/${embed}" class="w-full aspect-video rounded-lg shadow-lg" allowfullscreen allow="autoplay; encrypted-media"></iframe>`;
+                  }
+                }
+
+                if (html) media += `<div>${html}</div>`;
+              });
+            }
+            media += '</div>';
+          }
+
+          div.innerHTML = `
+            <h3 class="text-2xl font-semibold text-dark-teal mb-2">${project.title}</h3>
+            ${project.subtitle ? `<p class="text-lg text-teal-600 mb-4">${project.subtitle}</p>` : ''}
+            <p class="text-gray-dark mb-6">${project.description}</p>
+            ${project.tools ? `<p class="text-sm text-gray-600"><strong>Tools:</strong> ${project.tools}</p>` : ''}
+            ${media}
+          `;
+          projectsGrid.appendChild(div);
+        });
+
+        // Education
+        const eduList = document.getElementById("education-list");
+        eduList.innerHTML = "";
+        data.education.forEach(item => {
+          const div = document.createElement("div");
+          div.className = "card p-8 animate-fade-in bg-white bg-opacity-95 backdrop-blur-sm";
+          div.innerHTML = `
+            <h3 class="text-lg font-semibold text-dark-teal">${item.school}</h3>
+            <p class="text-gray-dark">${item.degree}</p>
+            <p class="text-sm text-gray-dark">${item.year}</p>
+          `;
+          eduList.appendChild(div);
+        });
+
+        // References – empty
+        document.getElementById("references-grid").innerHTML = "";
+
+      } catch (err) {
+        console.error("populateCVData error:", err);
+      }
+    }
+
+    function showSection(id) {
+      const home = document.getElementById("homepage");
+      gsap.to(home, { opacity: 0, duration: 0.4, ease: "power2.out", onComplete: () => {
+        home.classList.add("hidden");
+        const sec = document.getElementById(id);
+        sec.classList.remove("hidden");
+        gsap.fromTo(sec, { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power2.out" });
+      }});
+    }
+
+    function goBack() {
+      const current = document.querySelector("section:not(#homepage):not(.hidden)");
+      if (current) {
+        gsap.to(current, { opacity: 0, duration: 0.4, ease: "power2.out", onComplete: () => {
+          current.classList.add("hidden");
+          const home = document.getElementById("homepage");
+          home.classList.remove("hidden");
+          gsap.fromTo(home, { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power2.out" });
+        }});
+      }
+    }
+
+    function initParticles(id) {
+      particlesJS(`particles-${id}`, {
+        particles: {
+          number: { value: 20, density: { enable: true, value_area: 800 } },
+          color: { value: "#149B94" },
+          shape: { type: "circle" },
+          opacity: { value: 0.5, random: true },
+          size: { value: 3, random: true },
+          line_linked: { enable: false },
+          move: { enable: true, speed: 1, direction: "none", random: true }
+        },
+        interactivity: { detect_on: "canvas", events: { onhover: { enable: false }, onclick: { enable: false } } },
+        retina_detect: true
+      });
+    }
+
+    function initBackgroundHover() {
+      sections.forEach(s => {
+        const el = document.getElementById(`${s.id}-bg`);
+        if (el) {
+          el.style.backgroundImage = `url(${s.bgImage})`;
+          const card = document.querySelector(`#${s.id} .card`);
+          if (card) {
+            card.addEventListener("mouseenter", () => el.style.opacity = "0.3");
+            card.addEventListener("mouseleave", () => el.style.opacity = "0");
+          }
+        }
+      });
+    }
+
+    try {
+      populateHomepageCards();
+      populateCVData(cvData);
+      sections.forEach(s => initParticles(s.id));
+      initParticles("homepage");
+      initBackgroundHover();
+      document.querySelectorAll(".back-button").forEach(btn => btn.addEventListener("click", goBack));
+    } catch (err) {
+      console.error("Init error:", err);
+    }
+  </script>
+</body>
+</html>
